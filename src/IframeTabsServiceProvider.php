@@ -340,7 +340,7 @@ class IframeTabsServiceProvider extends ServiceProvider
                     }
                 }
                 return '';
-            }
+            };
 
             window.doStop = function()
             {
@@ -350,7 +350,7 @@ class IframeTabsServiceProvider extends ServiceProvider
                 else {
                     window.stop();
                 }
-            }
+            };
 
             window.openPop = function(url, title ,area) {
                 if (!area) {
@@ -369,13 +369,13 @@ class IframeTabsServiceProvider extends ServiceProvider
                 window.Pops.push(index);
 
                 return index;
-            }
+            };
 
             window.closePop = function()
             {
                 var index = parent.layer.getFrameIndex(window.name);
                 parent.layer.close(index);
-            }
+            };
 
             window.closeTab = function()
             {
@@ -385,7 +385,7 @@ class IframeTabsServiceProvider extends ServiceProvider
                     top.closeTabByPageId(tab_id.replace(/^iframe_/i, ''));
                     doStop();
                 }
-            }
+            };
         }
 EOT;
         Admin::script($script);
